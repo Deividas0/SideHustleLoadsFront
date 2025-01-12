@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="css/myprofile.css">
+</head>
+<body>
+    <header class="header">
+        <a href="/ads.html" class="back-link">Back to Listings</a>
+        <h1>My Profile</h1>
+    </header>
+    <main class="profile-container">
+        <form id="profileForm" class="profile-form">
+            <div class="profile-field">
+                <label for="balance">Account balance</label>
+                <div class="input-with-button">
+                    <input type="text" id="balance" name="balance" readonly>
+                    <button type="button" class="top-up-btn" onclick="window.location.href='topup.html'">Top Up</button>
+                    <button type="button" class="top-up-btn" onclick="window.location.href='shop.html'">Shop</button>
+                </div>
+            </div>
+            
+            <div class="profile-field">
+                <label for="status">Account status</label>
+                <input type="text" id="status" name="status" readonly>
+            </div>
+            <div class="profile-field">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" readonly>
+            </div>
+
+            <div class="profile-field">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="">Select your country</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sweden">Sweden</option>
+                </select>
+            </div>
+
+            <div class="profile-field">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="text" id="whatsapp" name="whatsapp" placeholder="Enter your WhatsApp number">
+            </div>
+
+            <div class="profile-field">
+                <label for="viber">Viber</label>
+                <input type="text" id="viber" name="viber" placeholder="Enter your Viber number">
+            </div>
+
+            <div class="profile-field">
+                <label for="registrationDate">Registration Date</label>
+                <input type="text" id="registrationDate" name="registrationDate" readonly>
+            </div>
+
+            <div class="profile-field">
+                <label for="totalListingsCreated">Total Listings Created</label>
+                <input type="text" id="totalListingsCreated" name="totalListingsCreated" readonly>
+            </div>
+
+            <div class="profile-actions">
+                <button type="submit">Save Changes</button>
+            </div>
+        </form>
+    </main>
+    <script src="js/myprofile.js"></script>
+</body>
+</html>

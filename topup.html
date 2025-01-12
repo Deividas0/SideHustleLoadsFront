@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/topup.css">
+    <script src="https://js.stripe.com/v3/"></script> <!-- Stripe JS -->
+    <title>Top Up</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <h1 class="header-title">Top Up</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Top Up Your Account</h2>
+        <form id="topup-form">
+            <!-- Amount Selection -->
+            <div class="field">
+                <label for="amount">Choose the amount you want to top up:</label>
+                <select id="amount" name="amount" required>
+                    <option value="" disabled selected>Select Amount</option>
+                    <option value="5">5 EUR</option>
+                    <option value="10">10 EUR</option>
+                    <option value="20">20 EUR</option>
+                </select>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="field">
+                <label for="payment-method">Choose your payment method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="stripe">Stripe</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="topup-btn">Proceed to Payment</button>
+        </form>
+    </div>
+    <script src="js/topup.js"></script>
+</body>
+</html>

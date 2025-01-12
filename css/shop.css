@@ -1,0 +1,107 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.shop-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ed9129;
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.shop-header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.back-btn {
+    color: #fff;
+    background-color: #ed9129;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Shop Item */
+.shop-item {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.shop-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.shop-item p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.buy-btn {
+    background-color: #5e63ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background-color: #4a50d1;
+}
+
+/* Balance Info */
+#balance-info {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #5e63ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .shop-header h1 {
+        font-size: 1.2em;
+    }
+
+    .buy-btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .shop-item h3 {
+        font-size: 1.3em;
+    }
+
+    .shop-item p {
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,153 @@
+/* General body styles */
+body {
+    background-image: url(/foto/indexbackground.webp);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+.header {
+    background-color: #ed9129;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.back-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #fff;
+    color: #ed9129;
+}
+
+/* Ad container */
+.ad-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* User details container */
+.user-details-container {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-details-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.user-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.user-detail {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Ad details container */
+.ad-details-container {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ad-details-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Ad image container */
+.ad-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ad-image {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ad information layout */
+.ad-info {
+    display: flex;
+    gap: 20px;
+}
+
+.ad-info-column {
+    flex: 1;
+}
+
+.ad-detail {
+    margin-bottom: 15px;
+}
+
+.ad-detail p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .ad-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .user-details-container,
+    .ad-details-container {
+        margin: 0 10px;
+    }
+
+    .ad-info {
+        flex-direction: column;
+    }
+
+    .ad-image {
+        width: 100%;
+    }
+}
