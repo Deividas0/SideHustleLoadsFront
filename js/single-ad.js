@@ -74,12 +74,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         const adImageContainer = document.querySelector(".ad-image-container");
         const columns = document.querySelectorAll(".ad-info-column");
     
-        // Add the image at the top
         adImageContainer.innerHTML = `
             <img src="${ad.base64Image}" alt="${ad.title}" class="ad-image">
         `;
     
-        // Left column details
         columns[0].innerHTML = `
             <div class="ad-detail">
                 <p class="label">Title:</p>
@@ -107,7 +105,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             </div>
         `;
     
-        // Right column details
         columns[1].innerHTML = `
             <div class="ad-detail">
                 <p class="label">Weight (kg):</p>

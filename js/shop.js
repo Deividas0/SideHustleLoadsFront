@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const balanceInfo = document.getElementById('balance-info');
     const buyVipButton = document.getElementById('buy-vip');
-    const token = getCookie('Token'); // Retrieve token from cookies
+    const token = getCookie('Token');
 
-    // Fetch current balance
     async function fetchBalance() {
         if (!token) {
             alert('You are not logged in. Please log in to continue.');
@@ -30,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Handle VIP Purchase
     buyVipButton.addEventListener('click', async () => {
         if (!token) {
             alert('You are not logged in. Please log in to continue.');
@@ -45,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 },
-                body: JSON.stringify({ amount: 4 }) // VIP costs €4
+                body: JSON.stringify({ amount: 4 })
             });
 
             if (!response.ok) {
@@ -54,17 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await response.json();
             alert(data.message);
-            fetchBalance(); // Update the balance
+            fetchBalance();
         } catch (error) {
             console.error('Error purchasing VIP:', error);
             alert('Unable to complete the purchase. Please try again.');
         }
     });
 
-    // Fetch balance on page load
     fetchBalance();
 
-    // Helper function to get a cookie value
     function getCookie(name) {
         const value = `; ${document.cookie}`;
         const parts = value.split(`; ${name}=`);

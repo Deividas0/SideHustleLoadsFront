@@ -1,4 +1,3 @@
-/* General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,7 +6,6 @@ body {
     color: #333;
 }
 
-/* Header */
 .shop-header {
     display: flex;
     align-items: center;
@@ -34,7 +32,6 @@ body {
     transition: background-color 0.3s;
 }
 
-/* Container */
 .container {
     padding: 20px;
     max-width: 800px;
@@ -44,7 +41,6 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Shop Item */
 .shop-item {
     margin: 20px 0;
     padding: 20px;
@@ -78,7 +74,6 @@ body {
     background-color: #4a50d1;
 }
 
-/* Balance Info */
 #balance-info {
     margin-top: 20px;
     text-align: center;
@@ -86,7 +81,6 @@ body {
     color: #5e63ff;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .shop-header h1 {
         font-size: 1.2em;

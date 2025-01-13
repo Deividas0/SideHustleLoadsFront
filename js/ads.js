@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // Fetch ads from the server
     const fetchAds = async (filterParams = {}) => {
         try {
             const response = await fetch("http://localhost:8080/listing/filter", {
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify(filterParams),
             });
 
-            // Handle HTTP response errors
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.message || "Failed to fetch ads");
@@ -30,23 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
             const listings = await response.json();
             displayAds(listings);
         } catch (error) {
-            // Show error message in the ads container
             adsContainer.innerHTML = `<p>Error: ${error.message}</p>`;
             console.error("Error fetching ads:", error);
         }
     };
 
-    // Display ads in the container
     const displayAds = (listings) => {
-        adsContainer.innerHTML = ""; // Clear container
+        adsContainer.innerHTML = "";
 
-        // Show a message if no ads are found
         if (listings.length === 0) {
             adsContainer.innerHTML = "<p>No ads found.</p>";
             return;
         }
 
-        // Loop through the ads and create cards
         listings.forEach((ad) => {
             const adElement = document.createElement("div");
             adElement.classList.add("ad-card");
@@ -70,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
 
-            // Make the ad-card clickable
             adElement.addEventListener("click", () => {
                 window.location.href = `/single-ad.html?id=${ad.id}`;
             });
@@ -79,28 +72,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // Handle filter form submission
     filterForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
         const fromCountry = filterForm["from-country"].value;
         const toCountry = filterForm["to-country"].value;
 
-        // Build filter parameters as a JSON object
         const filterParams = {
             pickUpCountry: fromCountry || null,
             deliveryCountry: toCountry || null,
         };
 
-        // Fetch ads with the filter applied
         fetchAds(filterParams);
     });
 
-    // Initial fetch of ads
     fetchAds({});
 });
 
-// Utility function to get cookies by name
 function getCookie(name) {
     const nameEQ = name + "=";
     const cookies = document.cookie.split(";");

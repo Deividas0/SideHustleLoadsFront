@@ -1,4 +1,3 @@
-/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,7 +9,6 @@ body {
     min-height: 100vh;
 }
 
-/* Header styles */
 .header {
     background-color: #ed9129;
     color: #fff;
@@ -41,7 +39,6 @@ body {
     color: #5e63ff;
 }
 
-/* Form container */
 .form-container {
     max-width: 800px;
     margin: 20px auto;
@@ -54,7 +51,6 @@ body {
     gap: 20px;
 }
 
-/* Form layout */
 form {
     display: flex;
     flex-wrap: wrap;
@@ -96,14 +92,12 @@ button:hover {
     background-color: #3e41cc;
 }
 
-/* Form actions */
 .form-actions {
     width: 100%;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     form {
         flex-direction: column;

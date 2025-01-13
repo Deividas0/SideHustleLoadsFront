@@ -1,4 +1,3 @@
-/* Base styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -107,7 +106,6 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 768px) {
     .container {
         margin: 20px auto;
@@ -161,7 +159,6 @@ button:disabled {
     }
 }
 
-/* Add focus effect for accessibility */
 input:focus, textarea:focus, button:focus {
     outline: 2px solid #5e63ff;
     box-shadow: 0 0 4px #5e63ff;

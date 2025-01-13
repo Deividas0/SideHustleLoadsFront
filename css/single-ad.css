@@ -1,4 +1,3 @@
-/* General body styles */
 body {
     background-image: url(/foto/indexbackground.webp);
     background-size: cover;
@@ -13,7 +12,6 @@ body {
     min-height: 100vh;
 }
 
-/* Header styles */
 .header {
     background-color: #ed9129;
     color: #fff;
@@ -44,7 +42,6 @@ body {
     color: #ed9129;
 }
 
-/* Ad container */
 .ad-container {
     display: flex;
     max-width: 1200px;
@@ -52,7 +49,6 @@ body {
     gap: 20px;
 }
 
-/* User details container */
 .user-details-container {
     flex: 1;
     background: #fff;
@@ -84,7 +80,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* Ad details container */
 .ad-details-container {
     flex: 2;
     background: #fff;
@@ -99,7 +94,6 @@ body {
     color: #333;
 }
 
-/* Ad image container */
 .ad-image-container {
     text-align: center;
     margin-bottom: 20px;
@@ -112,7 +106,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Ad information layout */
 .ad-info {
     display: flex;
     gap: 20px;
@@ -131,7 +124,6 @@ body {
     line-height: 1.5;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .ad-container {
         flex-direction: column;

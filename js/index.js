@@ -1,4 +1,3 @@
-// Add event listeners to the buttons
 document.getElementById("loginButton").addEventListener("click", function () {
     window.location.href = "/login";
 });

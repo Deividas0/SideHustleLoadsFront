@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // Fetch ad details and populate form
     const fetchAdDetails = async () => {
         const urlParams = new URLSearchParams(window.location.search);
         const adId = urlParams.get("id");
@@ -42,9 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const data = await response.json();
-            const listing = data.listing; // Extract the listing object from the response
+            const listing = data.listing;
 
-            // Populate the form with listing details
             adIdInput.value = listing.id;
             titleInput.value = listing.title;
             descriptionInput.value = listing.description;
@@ -62,11 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Handle form submission
+    
     modifyAdForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
-        const adId = adIdInput.value; // Extract the ID from the form
+        const adId = adIdInput.value;
         const formData = {
             id: adId,
             title: titleInput.value,
@@ -84,16 +82,15 @@ document.addEventListener("DOMContentLoaded", () => {
         await updateAd(adId, formData);
     });
 
-    // Update ad details
     const updateAd = async (adId, data) => {
         try {
             const response = await fetch(`http://localhost:8080/listing/${adId}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization": `Bearer ${token}`, // Include Bearer token for authorization
+                    "Authorization": `Bearer ${token}`,
                 },
-                body: JSON.stringify(data), // Send data as JSON
+                body: JSON.stringify(data),
             });
 
             if (!response.ok) {
@@ -102,13 +99,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             alert("Ad updated successfully!");
-            window.location.href = "/myads.html"; // Redirect to ads page after success
+            window.location.href = "/myads.html";
         } catch (error) {
             alert(`Error: ${error.message}`);
         }
     };
 
-    // Fetch ad details on page load
     fetchAdDetails();
 
     function getCookie(name) {

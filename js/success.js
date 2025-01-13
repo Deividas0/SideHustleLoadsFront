@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const sessionId = urlParams.get('session_id'); // Retrieve session ID from URL
-    // const token = getCookie('Token'); // Token for authentication
+    const sessionId = urlParams.get('session_id');
 
     if (!sessionId) {
         alert('Missing session ID. Please contact support.');
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
-                // 'Authorization': `Bearer ${token}`,
             },
             body: JSON.stringify({ sessionId }),
         });

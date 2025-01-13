@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // Fetch user-specific ads
     const fetchMyAds = async () => {
         try {
             const response = await fetch("http://localhost:8080/listing/byuserid", {
@@ -27,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Display ads in the container
     const displayAds = (listings) => {
         adsContainer.innerHTML = "";
         if (listings.length === 0) {
@@ -61,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         
 
-        // Add event listeners for modify and delete buttons
         document.querySelectorAll(".edit-btn").forEach((button) =>
             button.addEventListener("click", handleModify)
         );
@@ -71,13 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     };
 
-    // Handle modify action
     const handleModify = (event) => {
         const adId = event.target.dataset.id;
         window.location.href = `/modifyad.html?id=${adId}`;
     };
 
-    // Handle delete action
     const handleDelete = async (event) => {
         const adId = event.target.dataset.id;
 
@@ -98,13 +93,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             alert("Ad deleted successfully.");
-            fetchMyAds(); // Refresh ads after deletion
+            fetchMyAds();
         } catch (error) {
             alert(`Error: ${error.message}`);
         }
     };
 
-    // Fetch ads on page load
     fetchMyAds();
 
     function getCookie(name) {

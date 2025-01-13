@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         const amount = document.getElementById('amount').value;
-        const token = getCookie('Token'); // Assume the token is stored in cookies
+        const token = getCookie('Token');
 
         if (!token) {
             alert('You are not logged in. Please log in to proceed.');
